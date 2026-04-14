@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GARUDANETRA</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='logo.png') }}">
+        <span>GARUDANETRA</span>
+    </div>
+
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/book">Book</a>
+        <a href="/admin">Dashboard</a>
+    </div>
+</div>
+
+<section class="hero">
+    <img src="{{ url_for('static', filename='logo.png') }}" class="hero-logo">
+    <h1>Autonomous Railway Intelligence</h1>
+    <p>AI-powered drone inspection system</p>
+
+    <div class="hero-buttons">
+        <a href="/book"><button class="primary">Request Inspection</button></a>
+        <a href="/admin"><button class="secondary">Dashboard</button></a>
+    </div>
+</section>
+
+<section class="section dark">
+    <h2>About</h2>
+    <p>Advanced drone-based railway monitoring system with AI detection.</p>
+</section>
+
+<section class="section light">
+    <h2>How It Works</h2>
+    <div class="grid">
+        <div class="card">Deploy</div>
+        <div class="card">Capture</div>
+        <div class="card">Analyze</div>
+        <div class="card">Report</div>
+    </div>
+</section>
+
+<section class="section dark">
+    <h2>Inspection Map</h2>
+    <iframe src="https://maps.google.com/maps?q=india&t=&z=5&output=embed"
+        width="80%" height="400"></iframe>
+</section>
+
+<section class="cta">
+    <h2>Start Inspection Today</h2>
+    <a href="/book"><button class="primary">Get Started</button></a>
+</section>
+
+<footer>
+    <p>© 2026 GARUDANETRA</p>
+</footer>
+
+</body>
+</html>

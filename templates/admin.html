@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<script>
+setInterval(()=>location.reload(),3000);
+</script>
+
+<style>
+table { width:90%; margin:auto; }
+th,td { padding:10px; border:1px solid #444; }
+.pending { color:orange; }
+.complete { color:lightgreen; }
+</style>
+
+</head>
+
+<body>
+
+<h1>GARUDANETRA DASHBOARD</h1>
+
+<table>
+<tr>
+<th>ID</th><th>Location</th><th>Distance</th><th>Type</th><th>Status</th><th>Action</th>
+</tr>
+
+{% for b in bookings %}
+<tr>
+<td>{{b.id}}</td>
+<td>{{b.location}}</td>
+<td>{{b.distance}}</td>
+<td>{{b.type}}</td>
+
+<td class="{% if b.status=='Pending' %}pending{% else %}complete{% endif %}">
+{{b.status}}
+</td>
+
+<td>
+{% if b.status=="Pending" %}
+<form action="/complete/{{b.id}}" method="POST">
+<button>Complete</button>
+</form>
+{% else %}Done{% endif %}
+</td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Inspection</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h2>Book Inspection</h2>
+
+<form method="POST">
+    <input name="location" placeholder="Track Section" required><br><br>
+    <input name="distance" placeholder="Distance (km)" required><br><br>
+
+    <select name="type">
+        <option>Routine</option>
+        <option>Emergency</option>
+    </select><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

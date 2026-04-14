@@ -2,16 +2,18 @@
 <html>
 <head>
 <title>GARUDANETRA</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<!-- 🔥 ABSOLUTE STATIC PATH FIX -->
+<link rel="stylesheet" href="/static/style.css">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
     <div class="logo">
-        <img src="{{ url_for('static', filename='logo.png') }}">
+        <img src="/static/logo.png">
         <span>GARUDANETRA</span>
     </div>
 
@@ -22,9 +24,8 @@
     </div>
 </div>
 
-<!-- HERO -->
 <section class="hero">
-    <img src="{{ url_for('static', filename='logo.png') }}" class="hero-logo">
+    <img src="/static/logo.png" class="hero-logo">
 
     <h1>Autonomous Railway Intelligence</h1>
     <p>AI-powered drone inspection system</p>
@@ -34,19 +35,17 @@
     </a>
 </section>
 
-<!-- FEATURES -->
 <section class="section">
     <h2>Capabilities</h2>
 
     <div class="grid">
         <div class="card">🚀 Rapid Deployment</div>
         <div class="card">🤖 AI Detection</div>
-        <div class="card">📡 Real-Time Monitoring</div>
-        <div class="card">📊 Smart Reports</div>
+        <div class="card">📡 Monitoring</div>
+        <div class="card">📊 Reports</div>
     </div>
 </section>
 
-<!-- MAP -->
 <section class="section">
     <h2>Inspection Coverage</h2>
 

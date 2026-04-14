@@ -3,6 +3,9 @@ import json, uuid, os
 
 app = Flask(__name__)
 
+# Ensure correct static path
+app.config['STATIC_FOLDER'] = 'static'
+
 def load():
     try:
         with open("data.json") as f:
@@ -51,6 +54,7 @@ def complete(id):
     save(data)
     return redirect(url_for('admin'))
 
+# 🔥 IMPORTANT FOR RENDER
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)

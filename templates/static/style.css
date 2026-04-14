@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: 'Segoe UI', sans-serif;
     background: #020617;
     color: white;
 }
@@ -10,7 +10,10 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 15px 40px;
-    background: #000;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(10px);
 }
 
 .logo {
@@ -22,40 +25,61 @@ body {
     margin-right: 10px;
 }
 
+/* LINKS */
+.nav-links a {
+    margin-left: 20px;
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: #22c55e;
+}
+
 /* HERO */
 .hero {
-    height: 90vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.hero-logo {
-    width: 180px;
-}
-
-/* BUTTONS */
-.primary {
-    background: #22c55e;
-    padding: 10px 20px;
-    border: none;
-    margin: 5px;
-}
-.secondary {
-    background: transparent;
-    border: 1px solid #22c55e;
-    color: white;
-    padding: 10px;
-}
-
-/* SECTIONS */
-.section {
-    padding: 60px;
+    background: radial-gradient(circle, #0f172a, #020617);
     text-align: center;
 }
-.dark { background: #020617; }
-.light { background: #111827; }
 
+.hero-logo {
+    width: 220px;
+    margin-bottom: 20px;
+    animation: float 3s infinite ease-in-out;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* BUTTON */
+.primary {
+    padding: 12px 25px;
+    background: #22c55e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.primary:hover {
+    background: #16a34a;
+}
+
+/* SECTION */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* GRID */
 .grid {
     display: flex;
     justify-content: center;
@@ -63,8 +87,28 @@ body {
 }
 
 .card {
-    background: #1e293b;
+    background: rgba(255,255,255,0.05);
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
+    width: 200px;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+    transform: scale(1.1);
+    background: rgba(34,197,94,0.2);
+}
+
+/* MAP */
+iframe {
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
 }
